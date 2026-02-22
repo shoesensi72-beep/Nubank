@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="Kayque Pereira da Silva">
+    <meta name="theme-color" content="#8A05BE">
+    
+    <link rel="apple-touch-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4A8fky44VsLCYIBRVsYmvpH8v9LbEqxhZBuBXA6QIVw&s=10">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4A8fky44VsLCYIBRVsYmvpH8v9LbEqxhZBuBXA6QIVw&s=10">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Error.404</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Marcellus", serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            background: url('https://i.pinimg.com/736x/02/ca/a5/02caa55d3b7ba03296b3d45271b9c089.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            background-color: transparent;
+            border: 0px solid rgba(255, 255, 255, .2);
+            border-radius: 10px;
+            color: #CFCFCF;
+            padding: 30px 40px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            display: block;
+            text-align: center;
+        }
+
+        .container h1 {
+            font-size: 40px;
+        }
+
+        .input-box {
+            position: relative;
+            width: 100%;
+            height: 80px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input-box input {
+            width: 80%;
+            height: 40%;
+            background-color: transparent;
+            border: 2px solid rgba(255, 255, 255, .2);
+            outline: none;
+            font-size: 16px;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .Entrar, .AbrirFF {
+            width: 60%;
+            height: 40px;
+            background-color: #fff;
+            border: none;
+            border-radius: 40px;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+        }
+
+        .Entrar:hover, .AbrirFF:hover {
+            background-color: transparent;
+            border: 2px solid white;
+            color: #fff;
+        }
+
+        .box {
+            background-color: transparent;
+            border: 2px solid gray;
+            border-radius: 10px;
+            color: #CFCFCF;
+            padding: 30px 40px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            display: none;
+            text-align: center;
+        }
+
+        .box legend {
+            font-size: 40px;
+        }
+
+        .opcao-container {
+            margin: 10px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container" id="loginScreen">
+        <form id="loginForm">
+            <h1>Error.404</h1>
+            <div class="input-box">
+                <input id="passwordInput" placeholder="senha" type="password">
+            </div>
+            <button type="submit" class="Entrar">Entrar</button>
+        </form>
+    </main>
+
+    <div class="box" id="functionScreen">
+        <form>
+            <fieldset style="border: none;">
+                <legend><b>Error.404</b></legend>
+                <br>
+                <p>Funções:</p>
+                
+                <div class="opcao-container" onclick="alternar(event, 'ignorar')">
+                    <input type="checkbox" id="ignorar">
+                    <label>Ignorar Caídos</label>
+                </div>
+                
+                <div class="opcao-container" onclick="alternar(event, 'injetar')">
+                    <input type="checkbox" id="injetar">
+                    <label>Injetar Codigos</label>
+                </div>
+                
+                <div class="opcao-container" onclick="alternar(event, 'cabeca')">
+                    <input type="checkbox" id="cabeca">
+                    <label>Não Passar da Cabeça</label>
+                </div>
+                
+                <div class="opcao-container" onclick="alternar(event, 'espalhar')">
+                    <input type="checkbox" id="espalhar">
+                    <label>Bala não Espalhar</label>
+                </div>
+
+                <div class="opcao-container" onclick="alternar(event, 'aimbot')">
+                    <input type="checkbox" id="aimbot">
+                    <label>Aimbot 100%</label>
+                </div>
+                
+                <br>
+                <div style="text-align: left;">
+                    <label>FOV:</label>
+                    <input type="range" min="1" max="20" value="0" oninput="document.getElementById('valorBarra').innerText = this.value">
+                    <span id="valorBarra">0</span>%
+                </div>
+
+                <div style="text-align: left; margin-top: 10px;">
+                    <p>Tipo de Mira:</p>
+                    <input type="radio" id="preciso" name="tipo_mira">
+                    <label for="preciso">Preciso</label>
+                    <br>
+                    <input type="radio" id="rapido" name="tipo_mira">
+                    <label for="rapido">Rápido</label>
+                </div>
+
+			<a href="freefire://" class="AbrirFF">Abrir Free Fire</a>
+
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (document.getElementById('passwordInput').value === "404") {
+                document.getElementById('loginScreen').style.display = 'none';
+                document.getElementById('functionScreen').style.display = 'block';
+            } else {
+                alert("Senha incorreta!");
+            }
+        });
+
+        function alternar(event, id) {
+            const checkbox = document.getElementById(id);
+            if (event.target !== checkbox) {
+                checkbox.checked = !checkbox.checked;
+            }
+        }
+    </script>
+<script>aimbot=50%
+recoil=40%
+int action()
+{
+	StartActivity("Aimbot")
+	 local_Player
+		auxaim
+		 AIMBOT
+		 PlayerPosition(set_aim)
+		
+		 AIMFOV
+		 PlayerFov(set_fov=180°)
+		 
+		 AIMLOCK
+		 PlayerObjectHead(GameObject_Head)<<
+trueFuction<<return;
+}
+
+{
+("Auto Aim");set_aim=PlayerObjectHead=("Local_player,PlayerPerto");
+}</script>
+</body>
+</html>
